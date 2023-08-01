@@ -3,7 +3,7 @@ var router = express.Router();
 var path = require('path'); 
 var fs = require("fs");
 // import fetch from "node-fetch"
-var fetch = require("node-fetch")
+// var fetch = require("node-fetch")
 /* GET home page. */
 
 var brandsStr = require('../siteData/brands')
