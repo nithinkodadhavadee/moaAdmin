@@ -11,16 +11,48 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Brands' });
 });
 
-router.get('/list', function(req, res, next) {
+router.get('/list', async function(req, res, next) {
+    brands = await fetch("https://api.jsonbin.io/v3/b/64c8d7b39d312622a389ef85/latest", {
+            method: "GET",
+            headers: {
+              "Content-Type":"application/json",
+              "X-Master-Key":"$2b$10$nRZg.B/077TlbUN7.Hr49.eyMY8rXkXALUmbNeYa3VjVMJTL7McLC"
+            }
+          }).then((response) => response.json());
+
+    // console.log(typeof brands.record.brands);
+    brands = brands.record.brands;
     res.send(brands);
 });
 
-router.get('/:brandName', function(req, res, next) {
-    brands = brandsStr //JSON.parse(brandsStr);
+router.get('/:brandName', async function(req, res, next) {
+    // brands = brandsStr //JSON.parse(brandsStr);
+    // await fetch("https://api.jsonbin.io/v3/b/64c8d7b39d312622a389ef85/latest", {
+    //         method: "GET",
+    //         headers: {
+    //           "Content-Type":"application/json",
+    //           "X-Master-Key":"$2b$10$nRZg.B/077TlbUN7.Hr49.eyMY8rXkXALUmbNeYa3VjVMJTL7McLC"
+    //         }
+    //       }).then((res)=>{
+    //         console.log(res)
+    //       });
+
+
+        brands = await fetch("https://api.jsonbin.io/v3/b/64c8d7b39d312622a389ef85/latest", {
+            method: "GET",
+            headers: {
+              "Content-Type":"application/json",
+              "X-Master-Key":"$2b$10$nRZg.B/077TlbUN7.Hr49.eyMY8rXkXALUmbNeYa3VjVMJTL7McLC"
+            }
+          }).then((response) => response.json());
+
+    console.log(typeof brands.record.brands);
+    brands = brands.record.brands;
+    console.log(typeof brands);
     let toReturn = "No such brand exists";
     brandName = req.params.brandName;
     console.log(brandName)
-    brands["brands"].forEach(element => {
+    brands.forEach(element => {
         console.log(element.title)
         if(element.title.toLowerCase() == brandName){
             toReturn = element
@@ -33,7 +65,19 @@ router.post('/:brandName', async function(req, res, next) {
     console.log("this is what brands string contains")
     console.log(brandsStr)
     console.log(brandsStr.type)
-    brands = brandsStr //JSON.parse(brandsStr);
+    // brands = brandsStr //JSON.parse(brandsStr);
+
+    brands = await fetch("https://api.jsonbin.io/v3/b/64c8d7b39d312622a389ef85/latest", {
+            method: "GET",
+            headers: {
+              "Content-Type":"application/json",
+              "X-Master-Key":"$2b$10$nRZg.B/077TlbUN7.Hr49.eyMY8rXkXALUmbNeYa3VjVMJTL7McLC"
+            }
+          }).then((response) => response.json());
+
+    console.log(typeof brands.record.brands);
+    brands = brands.record.brands;
+
     let seenBrands = [];
     flag = 0;
     brandName = req.params.brandName;
@@ -47,7 +91,7 @@ router.post('/:brandName', async function(req, res, next) {
         return
     }
 
-    brands["brands"].forEach(element => {
+    brands.forEach(element => {
         console.log(element.title)
         if(element.title.toLowerCase() == brandName){
             flag = 1;
@@ -64,7 +108,21 @@ router.post('/:brandName', async function(req, res, next) {
     else{
         console.log(path.join(__dirname, "../siteData", "brands.json"))
         console.log(seenBrands)
-        fs.writeFileSync(path.join(__dirname, "../siteData", "brands.json"), JSON.stringify({"brands":seenBrands}));
+        // fs.writeFileSync(path.join(__dirname, "../siteData", "brands.json"), JSON.stringify({"brands":seenBrands}));
+
+        await fetch("https://api.jsonbin.io/v3/b/64c8d7b39d312622a389ef85", {
+            method: "PUT",
+            body: JSON.stringify({"brands": seenBrands}),
+            headers: {
+              "Content-Type":"application/json",
+              "X-Master-Key":"$2b$10$nRZg.B/077TlbUN7.Hr49.eyMY8rXkXALUmbNeYa3VjVMJTL7McLC"
+            }
+          }).then((res)=>{
+            // console.log(res)
+            console.log("data written")
+          });
+
+
         res.send("brand updated");
     }
 });
