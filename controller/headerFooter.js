@@ -25,7 +25,7 @@ async function getFooter(req, res, next) {
 function updateHeader(req, res, next){
     let data = req.body;
     console.log(data);
-    updateDb(data);
+    updateDb("header", data);
     res.send({
         status: 200,
         message: "Assume everything went well"
@@ -35,7 +35,7 @@ function updateHeader(req, res, next){
 function updateFooter(req, res, next){
     let data = req.body;
     console.log(data);
-    updateDb(data);
+    updateDb("footer", data);
     res.send({
         status: 200,
         message: "Assume everything went well"
