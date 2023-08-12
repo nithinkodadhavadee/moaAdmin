@@ -40,7 +40,7 @@ async function createBrand(req, res, next){
 
     console.log("\nbrands with new brand")
     console.log(brands);
-    updateDb("brands", brands);
+    await updateDb("brands", brands);
     res.send({
         status: 200,
         message: "aithu I guess"
@@ -68,7 +68,7 @@ async function updateBrand(req, res, next){
         }
     }
     console.log(brands);
-    updateDb("brands", brands);
+    await updateDb("brands", brands);
     return res.send({
         status: 200,
         message: "nada"

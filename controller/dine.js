@@ -40,7 +40,7 @@ async function createDine(req, res, next){
 
     console.log("\dines with new dine")
     console.log(dine);
-    updateDb("dine", dine);
+    await updateDb("dine", dine);
     res.send({
         status: 200,
         message: "aithu I guess"
@@ -68,7 +68,7 @@ async function dineUpdate(req, res, next){
         }
     }
     console.log(dine);
-    updateDb("dine", dine);
+    await updateDb("dine", dine);
     return res.send({
         status: 200,
         message: "nada"
