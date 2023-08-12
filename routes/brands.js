@@ -2,82 +2,16 @@ var express = require('express');
 var router = express.Router();
 var path = require('path'); 
 var fs = require("fs");
+var { index, listBrands, brandDetails } = require('../controller/brands');
 // import fetch from "node-fetch"
 // var fetch = require("node-fetch")
 /* GET home page. */
 const axios = require('axios');
 
 
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Brands' });
-});
-
-router.get('/list', async function(req, res, next) {
-
-    let brands = "";
-    try {
-        brands = await axios.get("https://api.jsonbin.io/v3/b/64c8d7b39d312622a389ef85/latest", { 
-            headers: {
-              "Content-Type":"application/json",
-              "X-Master-Key":"$2b$10$nRZg.B/077TlbUN7.Hr49.eyMY8rXkXALUmbNeYa3VjVMJTL7McLC"
-            }
-        });
-        console.log(brands.data);
-      } catch (error) {
-        console.error(error);
-      }
-
-      
-    // brands = await fetch("https://api.jsonbin.io/v3/b/64c8d7b39d312622a389ef85/latest", {
-    //         method: "GET",
-    //         headers: {
-    //           "Content-Type":"application/json",
-    //           "X-Master-Key":"$2b$10$nRZg.B/077TlbUN7.Hr49.eyMY8rXkXALUmbNeYa3VjVMJTL7McLC"
-    //         }
-    //       }).then((response) => response.json());
-
-    // console.log(typeof brands.record.brands);
-    brands = brands.data.record.brands;
-    res.send(brands);
-});
-
-router.get('/:brandName', async function(req, res, next) {
-    
-        // brands = await fetch("https://api.jsonbin.io/v3/b/64c8d7b39d312622a389ef85/latest", {
-        //     method: "GET",
-        //     headers: {
-        //       "Content-Type":"application/json",
-        //       "X-Master-Key":"$2b$10$nRZg.B/077TlbUN7.Hr49.eyMY8rXkXALUmbNeYa3VjVMJTL7McLC"
-        //     }
-        //   }).then((response) => response.json());
-
-        let brands = "";
-    try {
-        brands = await axios.get("https://api.jsonbin.io/v3/b/64c8d7b39d312622a389ef85/latest", { 
-            headers: {
-              "Content-Type":"application/json",
-              "X-Master-Key":"$2b$10$nRZg.B/077TlbUN7.Hr49.eyMY8rXkXALUmbNeYa3VjVMJTL7McLC"
-            }
-        });
-        console.log(brands.data);
-      } catch (error) {
-        console.error(error);
-      }
-
-    // console.log(typeof brands.record.brands);
-    brands = brands.data.record.brands;
-    console.log(typeof brands);
-    let toReturn = "No such brand exists";
-    brandName = req.params.brandName;
-    console.log(brandName)
-    brands.forEach(element => {
-        console.log(element.title)
-        if(element.title.toLowerCase() == brandName){
-            toReturn = element
-        }
-    });
-    res.send(toReturn);
-});
+router.get('/', index);
+router.get('/list', listBrands);
+router.get('/:brandName', brandDetails);
 
 router.post('/:brandName', async function(req, res, next) {
     console.log("this is what brands string contains")
