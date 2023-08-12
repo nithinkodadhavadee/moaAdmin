@@ -31,44 +31,44 @@ async function brandDetails(req, res, next){
     res.send(toReturn);
 }
 
-async function createBrand(req, res, next){
-    let brands = await readDb();
-    brands = brands.brands;
-    let newBrand = req.body;
-    console.log(newBrand);
-    brands.push(newBrand);
+async function createDine(req, res, next){
+    let db = await readDb();
+    dine = db.dine;
+    let newDine = req.body;
+    console.log(newDine);
+    dine.push(newDine);
 
-    console.log("\nbrands with new brand")
-    console.log(brands);
-    updateDb("brands", brands);
+    console.log("\dines with new dine")
+    console.log(dine);
+    updateDb("dine", dine);
     res.send({
         status: 200,
         message: "aithu I guess"
     })
 }
 
-async function updateBrand(req, res, next){
+async function dineUpdate(req, res, next){
 
-    let brands = await readDb();
-    brands = brands.brands;
+    let db = await readDb();
+    dine = db.dine;
     // console.log(typeof brands.record.brands);
-    console.log(typeof brands);
+    console.log(typeof dine);
     let toReturn = "No such brand exists";
-    brandName = req.params.brandName;
-    console.log(brandName)
+    dineName = req.params.dineName;
+    console.log(dineName)
     // brands.forEach(element => {
     //     console.log(element.title)
     //     if(element.title.toLowerCase() == brandName){
     //         element = req.body;
     //     }
     // });
-    for(let i=0; i<brands.length; i++){
-        if(brands[i].title===brandName){
-            brands[i] = req.body;
+    for(let i=0; i<dine.length; i++){
+        if(dine[i].title===dineName){
+            dine[i] = req.body;
         }
     }
-    console.log(brands);
-    updateDb("brands", brands);
+    console.log(dine);
+    updateDb("dine", dine);
     return res.send({
         status: 200,
         message: "nada"
@@ -76,4 +76,4 @@ async function updateBrand(req, res, next){
     // res.send(toReturn);
 }
 
-module.exports = { index, listBrands, brandDetails, createBrand, updateBrand };
+module.exports = { createDine, dineUpdate };

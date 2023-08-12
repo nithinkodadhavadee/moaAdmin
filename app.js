@@ -9,7 +9,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var headerRouter = require('./routes/headerFooter');
 var brandsRouter = require('./routes/brands');
-var apiRouter = require('./routes/api')
+var dineRouter = require('./routes/dine');
+var apiRouter = require('./routes/api');
 var app = express();
 
 // view engine setup
@@ -28,6 +29,7 @@ app.use('/api/', apiRouter);
 app.use('/header-footer', headerRouter);
 app.use('/users', usersRouter);
 app.use('/brands', brandsRouter);
+app.use('/dine', dineRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
