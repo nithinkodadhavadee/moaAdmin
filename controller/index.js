@@ -70,4 +70,31 @@ async function update(req, res, next){
     })
 }
 
-module.exports = { details, create, update };
+async function del(req, res, next){
+    console.log("deleting db entry")
+    console.log(req.query)
+    let module = req.query.module;
+    let title = req.query.title;
+
+    console.log(module)
+    console.log(title)
+
+    let db = await readDb();
+    db = db[module];
+    let toReturn = "No such brand exists";
+    let toDelete;
+    for(let i=0; i<db.length; i++){
+        if(db[i].title.toLowerCase()===title.toLowerCase()){
+            toDelete = i;
+            db.splice(i, 1)
+        }
+    }
+    
+    await updateDb(module, db);
+    return res.send({
+        status: 200,
+        message: "nada"
+    })
+}
+
+module.exports = { details, create, update, del };
