@@ -1,10 +1,19 @@
 var express = require('express');
 var router = express.Router();
 var path = require('path'); 
+var fs = require("fs");
+var { details, create, update } = require('../controller/index');
+// import fetch from "node-fetch"
+// var fetch = require("node-fetch")
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+
+router.get('/', details);
+router.post('/', create);
+router.patch('/', update);
+
+// router.get('/', function(req, res, next) {
+//   res.render('index', { title: 'Express' });
+// });
 
 
 router.get('/login', function(req, res, next) {

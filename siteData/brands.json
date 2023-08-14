@@ -1,163 +1,241 @@
 {
-    "dine": [
-      {
-        "title": "Third Wave Coffee",
-        "about": "produces great Tried calling you nithin, Please call me",
-        "floor": "Ground Floor",
-        "contact": "999999999",
-        "email": "contact@adidas.com",
-        "timings": "\t11:00 - 22:00",
-        "category": "CAFE",
-        "image": "https://im1.dineout.co.in/images/uploads/restaurant/sharpen/7/h/q/p7599-1645438547621366532d323.jpg?w=400"
-      },
-      {
-        "title": "Taj",
-        "about": "A brand that revolutionized basketball and football shoes",
-        "floor": "Second Floor",
-        "contact": "",
-        "email": "",
-        "timings": "",
-        "category": "RESTAURANT",
-        "image": "https://assets.architecturaldigest.in/photos/63733ec2a2dd6ea6560eb6da/16:9/w_1615,h_908,c_limit/Ditas%20Interior%20Image%20-%201%20(8).png"
-      },
-      {
-        "title": "Drink and Dine",
-        "about": "very popular sports brand with wide range of items for you to choose from",
-        "floor": "Ground Floor",
-        "contact": "",
-        "email": "",
-        "timings": "",
-        "category": "Restro Bar",
-        "image": "https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2022/03/29115348/best-bars-India.jpg?tr=w-1200,h-900"
-      },
-      {
-        "title": "Burger King",
-        "about": "produces great Tried calling you nithin, Please call me",
-        "floor": "Ground Floor",
-        "contact": "999999999",
-        "email": "contact@adidas.com",
-        "timings": "\t11:00 - 22:00",
-        "category": "Fast Food Joint",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9753bPwHN73j3WyCHFjHH-iMtsOkyTbtbB4YGJaTf7W3sRQYNCIHcXEdkQO67khskcuA&usqp=CAU"
-      }
-    ],
-    "brands": [
-      {
-        "title": "adidas",
-        "about": "produces great basketball",
-        "floor": "ground",
-        "contact": "",
-        "email": "",
-        "timings": "",
-        "category": "SPORTS",
-        "image": "https://cdn.britannica.com/94/193794-050-0FB7060D/Adidas-logo.jpg"
-      },
-      {
-        "title": "Nike",
-        "about": "A brand that revolutionized basketball and football shoes",
-        "floor": "Second Floor",
-        "contact": "",
-        "email": "",
-        "timings": "",
-        "category": "SPORTS",
-        "image": "https://thumbs.dreamstime.com/b/web-192037117.jpg"
-      },
-      {
-        "title": "Puma",
-        "about": "very popular sports brand with wide range of items for you to choose from",
-        "floor": "First Floor",
-        "contact": "",
-        "email": "",
-        "timings": ""
-      },
-      {
-        "title": "Under Armour",
-        "about": "produces great Tried calling you nithin, Please call me",
-        "floor": "Ground Floor",
-        "contact": "999999999",
-        "email": "contact@adidas.com",
-        "timings": "\t11:00 - 22:00",
-        "category": "SPORTS",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Under_armour_logo.svg/1200px-Under_armour_logo.svg.png"
-      }
-    ],
-    "header": {
-      "socials": [
-        {
-          "icon": "",
-          "title": "Instagram",
-          "link": ""
-        },
-        {
-          "icon": "",
-          "title": "Facebook",
-          "link": ""
-        }
-      ],
-      "logo": "",
-      "title": "",
-      "titleBarMenu": [
-        {
-          "name": "NEWLY LAUNCHED",
-          "link": "/launch"
-        },
-        {
-          "name": "BRANDS",
-          "link": "/brands"
-        },
-        {
-          "name": "DINE",
-          "link": "/dine"
-        },
-        {
-          "name": "LEISURE",
-          "link": "/leisure"
-        },
-        {
-          "name": "Luxury",
-          "link": "/luxury"
-        },
-        {
-          "name": "services",
-          "link": "/services"
-        }
-      ],
-      "branches": [],
-      "signIn": [],
-      "search": []
+  "dine": [
+    {
+      "title": "Third Wave Coffee",
+      "about": "produces great Tried calling you nithin, Please call me",
+      "floor": "Ground Floor",
+      "contact": "999999999",
+      "email": "contact@adidas.com",
+      "timings": "\t11:00 - 22:00",
+      "category": "CAFE",
+      "image": "https://im1.dineout.co.in/images/uploads/restaurant/sharpen/7/h/q/p7599-1645438547621366532d323.jpg?w=400"
     },
-    "footer": {
-      "logo": "",
-      "title": "",
-      "menu1": [
-        {
-          "name": "Luxury",
-          "link": "/luxury"
-        },
-        {
-          "name": "Brands",
-          "link": "/brands"
-        }
-      ],
-      "menu2": [
-        {
-          "name": "Offers & Packages",
-          "link": "/"
-        },
-        {
-          "name": "Leisure",
-          "link": "/"
-        }
-      ],
-      "menu3": [
-        {
-          "name": "Leasing",
-          "link": "/"
-        },
-        {
-          "name": "Careers",
-          "link": "/"
-        }
-      ]
+    {
+      "title": "Taj",
+      "about": "A brand that revolutionized basketball and football shoes",
+      "floor": "Second Floor",
+      "contact": "",
+      "email": "",
+      "timings": "",
+      "category": "RESTAURANT",
+      "image": "https://assets.architecturaldigest.in/photos/63733ec2a2dd6ea6560eb6da/16:9/w_1615,h_908,c_limit/Ditas%20Interior%20Image%20-%201%20(8).png"
+    },
+    {
+      "title": "Drink and Dine",
+      "about": "very popular sports brand with wide range of items for you to choose from",
+      "floor": "Ground Floor",
+      "contact": "",
+      "email": "",
+      "timings": "",
+      "category": "Restro Bar",
+      "image": "https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2022/03/29115348/best-bars-India.jpg?tr=w-1200,h-900"
+    },
+    {
+      "title": "Burger King",
+      "about": "produces great Tried calling you nithin, Please call me",
+      "floor": "Ground Floor",
+      "contact": "999999999",
+      "email": "contact@adidas.com",
+      "timings": "\t11:00 - 22:00",
+      "category": "Fast Food Joint",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9753bPwHN73j3WyCHFjHH-iMtsOkyTbtbB4YGJaTf7W3sRQYNCIHcXEdkQO67khskcuA&usqp=CAU"
     }
+  ],
+  "brands": [
+    {
+      "title": "Adidas",
+      "about": "produces great basketball",
+      "floor": "ground",
+      "contact": "",
+      "email": "",
+      "timings": "",
+      "category": "SPORTS",
+      "image": "https://cdn.britannica.com/94/193794-050-0FB7060D/Adidas-logo.jpg"
+    },
+    {
+      "title": "Nike",
+      "about": "A brand that revolutionized basketball and football shoes",
+      "floor": "Second Floor",
+      "contact": "",
+      "email": "",
+      "timings": "",
+      "category": "SPORTS",
+      "image": "https://thumbs.dreamstime.com/b/web-192037117.jpg"
+    },
+    {
+      "title": "Puma",
+      "about": "very popular sports brand with wide range of items for you to choose from",
+      "floor": "First Floor",
+      "contact": "",
+      "email": "",
+      "timings": ""
+    },
+    {
+      "title": "Under Armour",
+      "about": "produces great Tried calling you nithin, Please call me",
+      "floor": "Ground Floor",
+      "contact": "999999999",
+      "email": "contact@adidas.com",
+      "timings": "\t11:00 - 22:00",
+      "category": "SPORTS",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Under_armour_logo.svg/1200px-Under_armour_logo.svg.png"
+    },
+    {
+      "title": "Wrogn",
+      "about": "",
+      "floor": "Second Floor",
+      "contact": "",
+      "email": "",
+      "timings": "",
+      "category": "SPORTS",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBSIaeItw_6YuRGeR7LU9FnKHaonjxzOohckAVZAVp8v06MGSjTWfo19s2EKUXWkERWOU&usqp=CAU"
+    },
+    {
+      "title": "Asics",
+      "about": "",
+      "floor": "Second Floor",
+      "contact": "",
+      "email": "",
+      "timings": "",
+      "category": "SPORTS",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Asics_Logo.svg/2560px-Asics_Logo.svg.png"
+    }
+  ],
+  "luxuryDine": [
+    {
+      "title": "Oia",
+      "about": "produces great Tried calling you nithin, Please call me",
+      "floor": "Ground Floor",
+      "contact": "999999999",
+      "email": "contact@mall.com",
+      "timings": "\t11:00 - 22:00",
+      "category": "Fine Dine",
+      "image": "https://b.zmtcdn.com/data/pictures/0/20669940/7eb5a705136111798f0071a5d7a4bdec.jpg"
+    },
+    {
+      "title": "The Bistro @ Global Villege",
+      "about": "produces great Tried calling you nithin, Please call me",
+      "floor": "Top Floor",
+      "contact": "999999999",
+      "email": "contact@mall.com",
+      "timings": "\t11:00 - 22:00",
+      "category": "Fine Dine",
+      "image": "https://d4t7t8y8xqo0t.cloudfront.net/resized/1080X/restaurant%2F671093%2Fmenu%2Fmenu01602311270388.jpg"
+    }
+  ],
+  "luxuryBrands": [
+    {
+      "title": "Gucci",
+      "about": "produces great Tried calling you nithin, Please call me",
+      "floor": "Ground Floor",
+      "contact": "999999999",
+      "email": "contact@mall.com",
+      "timings": "\t11:00 - 22:00",
+      "category": "Fashon",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0ryiLObBNv1EZwRHnlJo3DhOBzSkb_Fxy_A"
+    },
+    {
+      "title": "Rolex_logo",
+      "about": "produces great Tried calling you nithin, Please call me",
+      "floor": "Ground Floor",
+      "contact": "999999999",
+      "email": "contact@mall.com",
+      "timings": "\t11:00 - 22:00",
+      "category": "Fashon",
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/9/95/Rolex_logo.svg/1200px-Rolex_logo.svg.png"
+    },
+    {
+      "title": "Rolex",
+      "about": "produces great Tried calling you nithin, Please call me",
+      "floor": "Top Floor",
+      "contact": "999999999",
+      "email": "contact@mall.com",
+      "timings": "\t11:00 - 22:00",
+      "category": "Fashon",
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/9/95/Rolex_logo.svg/1200px-Rolex_logo.svg.png"
+    }
+  ],
+  "header": {
+    "socials": [
+      {
+        "icon": "",
+        "title": "Instagram",
+        "link": ""
+      },
+      {
+        "icon": "",
+        "title": "Facebook",
+        "link": ""
+      }
+    ],
+    "logo": "",
+    "title": "",
+    "titleBarMenu": [
+      {
+        "name": "NEWLY LAUNCHED",
+        "link": "/launch"
+      },
+      {
+        "name": "BRANDS",
+        "link": "/brands"
+      },
+      {
+        "name": "DINE",
+        "link": "/dine"
+      },
+      {
+        "name": "LEISURE",
+        "link": "/leisure"
+      },
+      {
+        "name": "Services",
+        "link": "/luxury"
+      },
+      {
+        "name": "services",
+        "link": "/services"
+      }
+    ],
+    "branches": [],
+    "signIn": [],
+    "search": []
+  },
+  "footer": {
+    "menu1": [
+      {
+        "name": "Luxury",
+        "link": "/luxury"
+      },
+      {
+        "name": "Brands",
+        "link": "/brands"
+      }
+    ],
+    "menu2": [
+      {
+        "name": "Offers & Packages",
+        "link": "/"
+      },
+      {
+        "name": "Leisure",
+        "link": "/"
+      },
+      {
+        "name": "Services",
+        "link": "/services"
+      }
+    ],
+    "menu3": [
+      {
+        "name": "Leasing",
+        "link": "/"
+      },
+      {
+        "name": "Careers",
+        "link": "/"
+      }
+    ],
+    "logo": "",
+    "title": ""
   }
+}

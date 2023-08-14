@@ -11,6 +11,9 @@ var headerRouter = require('./routes/headerFooter');
 var brandsRouter = require('./routes/brands');
 var dineRouter = require('./routes/dine');
 var apiRouter = require('./routes/api');
+var luxuryBrands = require('./routes/luxuryBrands');
+var luxuryDine = require('./routes/luxuryDine');
+
 var app = express();
 
 // view engine setup
@@ -19,7 +22,7 @@ app.set('view engine', 'jade');
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors())
@@ -30,6 +33,8 @@ app.use('/header-footer', headerRouter);
 app.use('/users', usersRouter);
 app.use('/brands', brandsRouter);
 app.use('/dine', dineRouter);
+app.use('/luxuryBrands', luxuryBrands);
+app.use('/luxuryDine', luxuryDine);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

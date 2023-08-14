@@ -1,25 +1,16 @@
 let { readDb } = require('../models/read');
 let { updateDb } = require('../models/update');
 
-
-async function listBrands(req, res, next){
-
-    let brands = await readDb();
-    brands = brands.brands;
-    console.log(brands)
-    res.send(brands);
-}
-
 async function createDine(req, res, next){
     let db = await readDb();
-    dine = db.dine;
+    dine = db.luxuryDine;
     let newDine = req.body;
     console.log(newDine);
     dine.push(newDine);
 
     console.log("creating dines with new dine")
     // console.log(dine);
-    await updateDb("dine", dine);
+    await updateDb("luxuryDine", dine);
     res.send({
         status: 200,
         message: "aithu I guess"
@@ -27,14 +18,14 @@ async function createDine(req, res, next){
 }
 
 async function dineUpdate(req, res, next){
-
+    console.log("updating luxury dine")
     let db = await readDb();
-    dine = db.dine;
+    dine = db.luxuryDine;
     // console.log(typeof brands.record.brands);
-    console.log(typeof dine);
+    // console.log(typeof dine);
     let toReturn = "No such brand exists";
     dineName = req.params.dineName;
-    console.log(dineName)
+    // console.log(dineName)
     // brands.forEach(element => {
     //     console.log(element.title)
     //     if(element.title.toLowerCase() == brandName){
@@ -46,8 +37,8 @@ async function dineUpdate(req, res, next){
             dine[i] = req.body;
         }
     }
-    console.log(dine);
-    await updateDb("dine", dine);
+    // console.log(dine);
+    await updateDb("luxuryDine", dine);
     return res.send({
         status: 200,
         message: "nada"
@@ -58,7 +49,7 @@ async function dineUpdate(req, res, next){
 async function dineDetails(req, res, next){
 
     let db = await readDb();
-    dine = db.dine;
+    dine = db.luxuryDine;
     // console.log(typeof brands.record.brands);
     console.log(typeof dine);
     let toReturn = "No such brand exists";

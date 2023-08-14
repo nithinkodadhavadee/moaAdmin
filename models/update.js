@@ -6,7 +6,7 @@ let updateDb = async function (updateVal, updateData) {
   try {
     let data = await readDb();
     data[updateVal] = updateData;
-    console.log(data);
+    // console.log(data);
     await axios.put(process.env.JSONBIN_URL, JSON.stringify(data), {
       headers: {
         "Content-Type": "application/json",

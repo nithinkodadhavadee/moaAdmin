@@ -1,7 +1,7 @@
 var { readDb } = require('../models/read')
 
 function api(req, res, next) {
-  res.render('index', { title: 'API Docs' });
+  res.render('apiDocs', { title: 'API Docs' });
 }
 
 function index(req, res, next) {
@@ -16,4 +16,10 @@ async function listDine(req, res, next){
   res.send(brands);
 }
 
-module.exports = { api, index, listDine };
+async function alldb(req, res, next){
+ console.log("retrieving all db entries")
+  let db = await readDb();
+  res.send(db);
+}
+
+module.exports = { api, index, listDine, alldb };
